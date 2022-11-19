@@ -23,7 +23,19 @@ public class StringTest {
         String[] splitStr1 = inputStr1.split(",");
         String[] splitStr2 = inputStr2.split(",");
 
-        assertThat(splitStr1).contains("1", "2"); // 요구사항 1-1 확인
-        assertThat(splitStr2).containsExactly("1"); // 요구사항 1-2 확인
+        assertThat(splitStr1).contains("1", "2");
+        assertThat(splitStr2).containsExactly("1");
+    }
+
+    @Test
+    void studyTest2() {
+        /*
+         * "(1,2)" 값이 주어졌을 때 String의 substring() 메소드를 활용해 ()을 제거하고 "1,2"를 반환하도록 구현한다.
+         */
+
+        String inputStr = "(1,2)";
+        String subStr = inputStr.substring(1, 4);
+
+        assertThat(subStr).isEqualTo("1,2");
     }
 }
